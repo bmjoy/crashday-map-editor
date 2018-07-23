@@ -4,8 +4,6 @@ using UnityEditor;
 
 public class Controller : MonoBehaviour
 {
-    public TrackSavable Track;
-    public P3DModel Model;
     public string CrashdayPath = "";
 
 	void Start ()
@@ -26,7 +24,7 @@ public class Controller : MonoBehaviour
             {
 				PlayerPrefs.SetString("lastmappath", path);
 				MapParser mapParser = new MapParser();
-                Track = mapParser.ReadMap(path);
+                TrackSavable Track = mapParser.ReadMap(path);
                 GetComponent<TrackManager>().LoadTrack(Track);
             }
         }
@@ -39,7 +37,7 @@ public class Controller : MonoBehaviour
 			    if (GUI.Button(new Rect(115, 5, 100, 30), "Load last map"))
 			    {
 				    MapParser mapParser = new MapParser();
-				    Track = mapParser.ReadMap(LastMapPath);
+				    TrackSavable Track = mapParser.ReadMap(LastMapPath);
 				    GetComponent<TrackManager>().LoadTrack(Track);
 			    }
 		    }
