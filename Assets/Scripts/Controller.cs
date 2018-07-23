@@ -17,6 +17,8 @@ public class Controller : MonoBehaviour
 
     void OnGUI()
     {
+	    return;
+
         if (GUI.Button(new Rect(10, 5, 100, 30), "Load map"))
         {
             string path = EditorUtility.OpenFilePanel("Open trk file", CrashdayPath + "/user/", "trk");

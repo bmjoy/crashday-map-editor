@@ -167,9 +167,6 @@ public class TrackManager : MonoBehaviour
             }
         }
 
-		FindObjectOfType<Camera>().gameObject.transform.localPosition = new Vector3(CurrentTrack.Width*10, 100, CurrentTrack.Height*-10);
-		FindObjectOfType<Camera>().transform.LookAt(new Vector3(CurrentTrack.Width*20, 0, CurrentTrack.Height*-20));
-
 	    CurrentTrackState = TrackState.TracckLoaded;
     }
 }

@@ -43,6 +43,8 @@ public class ToolManager : MonoBehaviour
 
 	void OnGUI()
 	{
+		return;
+
 		int i = 0;
 		foreach (var tool in _tools)
 		{
